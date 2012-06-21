@@ -22,16 +22,17 @@
     </appender-->
 
     <logger name="org.springframework">
-        <level value="WARN"/>
+        <level value="ERROR"/>
     </logger>
 
     <logger name="org.hibernate">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="com.atomikos">
         <level value="WARN"/>
     </logger>
 
-    <logger name="atomikos">
-        <level value="WARN"/>
-    </logger>
     <!-- Root Logger -->
     <root>
         <priority value="INFO"/>

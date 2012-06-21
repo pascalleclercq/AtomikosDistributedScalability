@@ -47,7 +47,7 @@ public class Main {
         obj.setPasswd("passwd");
         List<ExecutionItem> executionItemList = new LinkedList<ExecutionItem>();
         ExecutionItem executionItem;
-        int higth = 2000;
+        int higth = 1200;
         int low = 100;
         int delta = 100;
         //just for init

@@ -36,7 +36,7 @@ public class CacheNodeManagerImpl implements ApplicationContextAware, ICacheNode
         annotatedClasses = new Class[]{User.class};
     }
 
-    @Override
+
     public void registerCacheNode(int nodeNumber) {
         h2XA = new GenericBeanDefinition();
         h2XA.setBeanClass(org.h2.jdbcx.JdbcDataSource.class);
@@ -74,14 +74,14 @@ public class CacheNodeManagerImpl implements ApplicationContextAware, ICacheNode
         defaultListableBeanFactory.registerBeanDefinition("h2sessionFactory_Node_" + nodeNumber, sessionFactoryBeanDefinition);
     }
 
-    @Override
+
     public void unregisterCacheNode(int nodeNumber) {
         defaultListableBeanFactory.removeBeanDefinition("h2sessionFactory_Node_" + nodeNumber);
         defaultListableBeanFactory.removeBeanDefinition("h2DataSource_Node_" + nodeNumber);
         defaultListableBeanFactory.removeBeanDefinition("h2jdbcXA_Node_" + nodeNumber);
     }
 
-    @Override
+
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
     }
